@@ -23,20 +23,19 @@ app.get("/get-cookie", cookieSessionCtrl.getCookie);
 app.get("/set-session", cookieSessionCtrl.setSession);
 app.get("/get-session", cookieSessionCtrl.getSession);
 
-// ================= post routes =================
-app.get("/gets-mahasiswa", postMahasiswaCtrl.getPosts);
-app.post("/posts-mahasiswa", postMahasiswaCtrl.addPosts);
-app.get("/getsone-mahasiswa/:id", postMahasiswaCtrl.getOnePost);
-app.put("/edit-mahasiswa/:id", postMahasiswaCtrl.updateOne);
-app.delete("/delete-mahasiswa/:id", postMahasiswaCtrl.deleteOne);
-// ================= post routes =================
 app.get("/gets-matkul", postMatkulCtrl.getPosts);
 app.post("/posts-matkul", postMatkulCtrl.addPosts);
 app.get("/getsone-matkul/:id", postMatkulCtrl.getOnePost);
 app.put("/edit-matkul/:id", postMatkulCtrl.updateOne);
 app.delete("/delete-matkul/:id", postMatkulCtrl.deleteOne);
 
-// header
+app.get("/gets-mahasiswa", postMahasiswaCtrl.getPosts);
+app.post("/posts-mahasiswa", postMahasiswaCtrl.addPosts);
+app.get("/getsone-mahasiswa/:id", postMahasiswaCtrl.getOnePost);
+app.put("/edit-mahasiswa/:id", postMahasiswaCtrl.updateOne);
+app.delete("/delete-mahasiswa/:id", postMahasiswaCtrl.deleteOne);
+
+
 app.get("/get-headers", (req, res) => {
   const headers = req.headers;
   res.send({ headers });
